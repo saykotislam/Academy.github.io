@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লাইফ সায়েন্স একাডেমি</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo50x40.png" alt="">
+        </div>
+        <h1>লাইফ সায়েন্স একাডেমি - ক্যারিয়ার প্লান</h1>
+    </header>
+    
+    <div class="landing-page"  style="display: none;" >
+        <div class="landing-content">
+            <h2>বেছে নাও পছন্দের ক্যারিয়ার প্লান, স্থির করো সুস্পষ্ট লক্ষ্য</h2>
+            <p>(শুধুমাত্র ১২ হতে ১৮ বছর বয়সীদের জন্য প্রযোজ্য)</p>
+            <p>প্রিয় ছাত্রছাত্রী,</p>
+            <p>সফল হতে চাও বলেই তো তুমি কঠোর পরিশ্রমে দিনরাত পড়ালেখা করে চলেছ, কিন্তু পেশাগত জীবনে তুমি নিজেকে কিভাবে প্রতিষ্ঠিত দেখতে পছন্দ কর, তা কি নির্ধারণ করতে পেরেছ অদ্যাবধি?</p>
+            <p>বিমানের পাইলটের জন্য নিজ গন্তব্য স্থির করা যেমন অবশ্য করনীয় ঠিক তেমনি জীবনের লক্ষ্য নির্ধারণ করাও অত্যন্ত গুরুত্বপূর্ণ। যারা নিজেদের লক্ষ্য সম্পর্কে স্পষ্ট হতে পেরেছে তারাই কেবল নিজেদের সবটুকু সামর্থ্য দিয়ে সে লক্ষ্যের পেছনে ছুটতে পারে আর তারাই কেবল লক্ষ্যে পৌঁছুতে পারে। যারা আপন লক্ষ্যটি স্পষ্ট করতে পেরেছে তাদের প্রতি প্রাকৃতিক সব শক্তি স্বয়ংক্রিয়ভাবে সাহায্যে এগিয়ে আসে, তাই যারা সুস্পষ্ট লক্ষ্য নিয়ে পথ চলতে শেখেনি তারা কখনোই সফলতার শীর্ষে   উঠতে পারে না। কিন্তু কিভাবে পেশাগত জীবনের সেই লক্ষ্য নির্ধারণ করতে হয়? তোমার মাঝে কোন সহজাত শক্তিটি সুপ্ত হয়ে অপেক্ষা করছে যার বিকাশ তোমাকে সবথেকে আনন্দিত করবে? কোন পেশাগত জীবনে তুমি সবথেকে বেশি সফল হবে?</p>
+            <p>মাত্র কয়েক মিনিটের একটি টেস্টে আমরা তোমাকে খুঁজে নিতে সাহায্য করব তোমার জন্য সবথেকে উপযুক্ত ক্যারিয়ার লক্ষ্য। তুমি শুধু প্রশ্নগুলো পড়বে আর নিজের জন্য সবথেকে সত্য মনে হওয়া উত্তরটি বেছে নিবে। মনে রেখ, এখানে সঠিক কিংবা ভুল উত্তর বলে কিছু নেই, তুমি শুধু সততার সাথে আপন মনের অনুভূতি থেকে উত্তরগুলো বেছে নেবে। তোমার দেওয়া উত্তরগুলো থেকে নানা প্রকার মনস্তাত্ত্বিক পর্যালোচনার মাধ্যমে তোমার জন্য সবথেকে উপযুক্ত ক্যারিয়ার প্লানের রূপরেখা প্রদান করবো আমরা। আশা করি, এই ক্যারিয়ার প্লানের সাহায্যে জীবন লক্ষ্য নির্ধারণে তুমি সঠিক সিদ্ধান্ত নিতে  সক্ষম হবে আর একদিন সফলতার শীর্ষে দেখবে নিজেকে।</p>
+            <p>দোয়া আর শুভকামনা রইল তোমার জন্য।</p>
+        </div>
+        <button class="btn" onclick="startQuiz()"><b> START </b></button>
+    </div>
+    
+    <div class="wrapper" id="wrapper" style="display: none;">
+        <div class="container">
+            <div id="quiz"></div>
+        <!--    <div id="break">Next round will start soon...</div> -->
+        </div>
+        <footer id="footer">
+            <div id="timer">সময়ঃ <span id="time">0:00</span></div>
+            <div id="question-number">প্রশ্ন নম্বরঃ <span id="current-question">1</span>/42</div>
+        </footer>
+    </div>
+
+    <div class="intro-section">
+        <div class="is-header">
+            <h2>স্বাগতম! লাইফ সায়েন্স একাডেমির ক্যারিয়ার প্লান কুইজে।</h2>
+        </div>
+        <form id="userInfoForm">
+            <label for="name">নাম:</label>
+            <input type="text" id="name" placeholder="Enter Your Name" name="name" ><br><br>
+ 
+            <label for="phone">মোবাইল নম্বর:</label>
+            <input type="tel" id="phone" placeholder="Phone No" name="phone" ><br><br>
+
+            <label for="email">ইমেইল:</label>
+            <input type="email" id="email" placeholder="email@lsa.com" name="email" ><br><br>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
